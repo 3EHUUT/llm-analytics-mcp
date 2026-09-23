@@ -1,0 +1,130 @@
+{
+  "dataset_id": "ds_c65a1dd0e9934950a918e591955e3348",
+  "original_row_count": 195,
+  "duplicate_count": 3,
+  "missing_value_summary": {
+    "Sales": {
+      "count": 2,
+      "percentage": 1.03
+    },
+    "Quantity": {
+      "count": 1,
+      "percentage": 0.51
+    },
+    "Profit": {
+      "count": 1,
+      "percentage": 0.51
+    }
+  },
+  "cleaning_result": {
+    "dataset_id": "ds_c65a1dd0e9934950a918e591955e3348",
+    "rows_before": 195,
+    "rows_after": 192,
+    "duplicates_removed": 3,
+    "missing_values_handled": {
+      "Sales": {
+        "count": 2,
+        "strategy": "median",
+        "fill_value": 1194.3400000000001
+      },
+      "Quantity": {
+        "count": 1,
+        "strategy": "median",
+        "fill_value": 5.0
+      },
+      "Profit": {
+        "count": 1,
+        "strategy": "median",
+        "fill_value": 244.09
+      }
+    },
+    "outliers": {
+      "Sales": {
+        "count": 10,
+        "method": "IQR",
+        "action": "kept"
+      },
+      "Quantity": {
+        "count": 1,
+        "method": "IQR",
+        "action": "kept"
+      },
+      "Profit": {
+        "count": 8,
+        "method": "IQR",
+        "action": "kept"
+      }
+    }
+  },
+  "top_regions_by_sales": [
+    {
+      "Region": "North",
+      "Sales": 111966.48999999999
+    },
+    {
+      "Region": "West",
+      "Sales": 107674.48
+    },
+    {
+      "Region": "East",
+      "Sales": 96854.23
+    },
+    {
+      "Region": "South",
+      "Sales": 92145.03
+    }
+  ],
+  "top_products_by_profit": [
+    {
+      "Product": "Laptop",
+      "Profit": 36342.24
+    },
+    {
+      "Product": "Monitor",
+      "Profit": 17510.28
+    },
+    {
+      "Product": "Headphones",
+      "Profit": 9549.01
+    },
+    {
+      "Product": "Keyboard",
+      "Profit": 2950.06
+    },
+    {
+      "Product": "Mouse",
+      "Profit": 1679.28
+    }
+  ],
+  "trend_summary": {
+    "first_value": 13207.55,
+    "last_value": 21293.92,
+    "change_pct": 61.22535973742291,
+    "min_value": 12118.45,
+    "max_value": 35072.85,
+    "peak_period": "2024-01-01T00:00:00"
+  },
+  "correlation_strongest_pairs": [
+    {
+      "column_1": "Sales",
+      "column_2": "Profit",
+      "correlation": 0.9201425860773815
+    },
+    {
+      "column_1": "Quantity",
+      "column_2": "Profit",
+      "correlation": 0.18156450426750076
+    },
+    {
+      "column_1": "Sales",
+      "column_2": "Quantity",
+      "correlation": 0.1438243567993783
+    }
+  ],
+  "chart_paths": {
+    "sales_trend": "output/demo_sales_trend.png",
+    "region_sales": "output/demo_region_sales.png",
+    "profit_distribution": "output/demo_profit_distribution.png",
+    "correlation_heatmap": "output/demo_correlation_heatmap.png"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "analytics": {
+      "command": "PATH_TO_PROJECT_PYTHON",
+      "args": ["-m", "src.server"],
+      "cwd": "PATH_TO_PROJECT",
+      "env": {
+        "PYTHONPATH": "PATH_TO_PROJECT"
+      }
+    }
+  }
+}
